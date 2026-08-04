@@ -176,3 +176,41 @@ section{
     font-weight:700;
 
 }
+
+/* ======================
+   INVESTMENT SECTION
+====================== */
+
+.investment-section{
+    background:#f8fbff;
+    padding:90px 0;
+}
+
+.investment-card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.3s;
+    height:100%;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.investment-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+.investment-card img{
+    height:240px;
+    width:100%;
+    object-fit:cover;
+}
+
+.investment-card h4{
+    color:#003366;
+    margin-bottom:15px;
+}
+
+.learn-more-btn{
+    margin-top:15px;
+}
