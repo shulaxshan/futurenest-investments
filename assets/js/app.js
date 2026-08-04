@@ -1,0 +1,1 @@
+console.log("FutureNest Investments Loaded");
