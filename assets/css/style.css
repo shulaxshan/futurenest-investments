@@ -214,3 +214,156 @@ section{
 .learn-more-btn{
     margin-top:15px;
 }
+
+.newsletter-section{
+
+    background:#003366;
+
+    color:white;
+
+    padding:80px 0;
+
+}
+
+.newsletter-section h2{
+
+    margin-bottom:20px;
+
+}
+
+.newsletter-section .form-control{
+
+    height:55px;
+
+}
+
+.newsletter-section .btn{
+
+    width:180px;
+
+}
+
+/* ======================
+   FOOTER
+====================== */
+
+.footer{
+    background:#001f3f;
+    color:#ffffff;
+    padding:60px 0 30px;
+}
+
+.footer h3{
+    color:#ffffff;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.footer h5{
+    color:#ffffff;
+    margin-bottom:20px;
+}
+
+.footer p{
+    color:#d9d9d9;
+    line-height:1.8;
+}
+
+.footer ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.footer ul li{
+    margin-bottom:12px;
+}
+
+.footer ul li a{
+    color:#d9d9d9;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.footer ul li a:hover{
+    color:#4da3ff;
+    padding-left:6px;
+}
+
+.footer hr{
+    border-color:rgba(255,255,255,0.2);
+    margin:40px 0 20px;
+}
+
+.footer-bottom{
+    text-align:center;
+    color:#bfbfbf;
+    font-size:14px;
+}
+
+/* ======================
+   ABOUT PAGE
+====================== */
+
+.about-hero{
+
+    padding:100px 0;
+
+    background:#eef5fc;
+
+}
+
+.about-hero img{
+
+    border-radius:20px;
+
+}
+
+.company-story{
+
+    padding:90px 0;
+
+}
+
+.company-story h4{
+
+    color:#003366;
+
+    margin-bottom:20px;
+
+}
+
+/* ======================
+   MISSION VISION VALUES
+====================== */
+
+.mvv-section{
+    padding:90px 0;
+    background:#f8fbff;
+}
+
+.mvv-card{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+    transition:.3s;
+    height:100%;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.mvv-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+.mvv-icon{
+    font-size:50px;
+    color:#0056b3;
+    margin-bottom:20px;
+}
+
+.mvv-card h4{
+    color:#003366;
+    margin-bottom:20px;
+}
