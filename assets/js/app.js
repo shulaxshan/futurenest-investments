@@ -21,7 +21,7 @@ document.querySelectorAll(".learn-more-btn").forEach(button => {
 
 const newsletterForm = document.getElementById("newsletter-form");
 
-newsletterForm.addEventListener("submit", function(e){
+newsletterForm?.addEventListener("submit", function(e){
 
     e.preventDefault();
 
@@ -96,13 +96,96 @@ document.getElementById("btn-contact-us")
 
 // Search
 
-document
-.getElementById("fund-search")
-?.addEventListener("keyup",function(){
+// =================================
+// FUND SEARCH & FILTERS
+// =================================
 
-    console.log("Searching:",this.value);
+const fundSearch = document.getElementById("fund-search");
+const riskFilter = document.getElementById("risk-filter");
+const categoryFilter = document.getElementById("category-filter");
 
-});
+const fundCards = document.querySelectorAll(".fund-card");
+
+
+function filterFunds() {
+
+    const searchValue =
+        fundSearch?.value.toLowerCase().trim() || "";
+
+    const riskValue =
+        riskFilter?.value || "All";
+
+    const categoryValue =
+        categoryFilter?.value || "All";
+
+
+    fundCards.forEach(card => {
+
+        const fundName =
+            card.dataset.fundName.toLowerCase();
+
+        const fundRisk =
+            card.dataset.risk;
+
+        const fundCategory =
+            card.dataset.category;
+
+
+        const matchesSearch =
+            fundName.includes(searchValue);
+
+        const matchesRisk =
+            riskValue === "All" ||
+            fundRisk === riskValue;
+
+        const matchesCategory =
+            categoryValue === "All" ||
+            fundCategory === categoryValue;
+
+
+        if (
+            matchesSearch &&
+            matchesRisk &&
+            matchesCategory
+        ) {
+
+            card.parentElement.style.display = "";
+
+        } else {
+
+            card.parentElement.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+// Search
+
+fundSearch?.addEventListener(
+    "input",
+    filterFunds
+);
+
+
+// Risk filter
+
+riskFilter?.addEventListener(
+    "change",
+    filterFunds
+);
+
+
+// Category filter
+
+categoryFilter?.addEventListener(
+    "change",
+    filterFunds
+);
+
+
 
 // Risk
 
