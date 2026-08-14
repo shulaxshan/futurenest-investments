@@ -210,22 +210,205 @@ document
 
 // Fund Cards
 
-document.querySelectorAll(".btn-view-details").forEach(button => {
+// =================================
+// FUND DETAILS MODAL
+// =================================
+
+document
+.querySelectorAll(".btn-view-details")
+.forEach(button => {
 
     button.addEventListener("click", function(){
 
-        alert(this.dataset.fund);
+        const fundName =
+            this.dataset.fund;
+
+        const modalFactsheet =
+            document.getElementById("modal-factsheet");
+
+        modalFactsheet.dataset.file = this
+            .closest(".fund-card")
+            .querySelector(".btn-download")
+            .dataset.file;
+
+        document
+        .getElementById("modal-fund-name")
+        .textContent = fundName;
+
+
+        // Fund information
+
+        let description = "";
+        let risk = "";
+        let minimum = "";
+        let returnValue = "";
+
+
+        if (
+            fundName ===
+            "FutureNest Global Equity Fund"
+        ){
+
+            description =
+                "Long-term capital appreciation through global equity investments.";
+
+            risk = "High";
+            minimum = "LKR 100,000";
+            returnValue = "13.4%";
+
+        }
+
+
+        else if (
+            fundName ===
+            "Income Shield Bond Fund"
+        ){
+
+            description =
+                "Stable income through carefully selected government and corporate bonds.";
+
+            risk = "Low";
+            minimum = "LKR 50,000";
+            returnValue = "8.2%";
+
+        }
+
+
+        else if (
+            fundName ===
+            "Retirement Growth Fund"
+        ){
+
+            description =
+                "Diversified portfolio designed for long-term retirement planning.";
+
+            risk = "Medium";
+            minimum = "LKR 75,000";
+            returnValue = "10.8%";
+
+        }
+
+
+        document
+        .getElementById("modal-fund-description")
+        .textContent = description;
+
+
+        document
+        .getElementById("modal-risk")
+        .textContent = risk;
+
+
+        document
+        .getElementById("modal-minimum")
+        .textContent = minimum;
+
+
+        document
+        .getElementById("modal-return")
+        .textContent = returnValue;
+
+
+        // Show Bootstrap modal
+
+        const modalElement =
+            document.getElementById(
+                "fundDetailsModal"
+            );
+
+
+        const modal =
+            new bootstrap.Modal(modalElement);
+
+
+        modal.show();
 
     });
 
 });
 
-document.querySelectorAll(".btn-download").forEach(button => {
+// =================================
+// FACTSHEET DOWNLOAD
+// =================================
+
+document
+.querySelectorAll(".btn-download")
+.forEach(button => {
 
     button.addEventListener("click", function(){
 
-        alert("Download: " + this.dataset.file);
+        const file =
+            this.dataset.file;
+
+        const link =
+            document.createElement("a");
+
+        link.href = file;
+
+        link.download = "";
+
+        document.body.appendChild(link);
+
+        link.click();
+
+        document.body.removeChild(link);
 
     });
 
 });
+
+
+// =================================
+// MODAL FACTSHEET DOWNLOAD
+// =================================
+
+document
+.getElementById("modal-factsheet")
+?.addEventListener("click", function(){
+
+    const file = this.dataset.file;
+
+    if (!file) {
+        return;
+    }
+
+    const link = document.createElement("a");
+
+    link.href = file;
+
+    link.download = "";
+
+    document.body.appendChild(link);
+
+    link.click();
+
+    document.body.removeChild(link);
+
+});
+
+/* =========================
+   EXPLORE INSIGHTS BUTTON
+========================= */
+
+const exploreInsightsButton =
+    document.getElementById("explore-insights-btn");
+
+if (exploreInsightsButton) {
+
+    exploreInsightsButton.addEventListener("click", function () {
+
+        const articlesSection =
+            document.getElementById("insights-articles");
+
+        if (articlesSection) {
+
+            articlesSection.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }
+
+    });
+
+}

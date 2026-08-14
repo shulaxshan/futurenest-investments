@@ -110,7 +110,7 @@
 
                         <li class="nav-item">
                             <a class="nav-link"
-                               href="#"
+                               href="insights.html"
                                id="nav-insights">
                                 Insights
                             </a>
@@ -126,7 +126,7 @@
 
                         <li class="nav-item">
                             <a class="nav-link"
-                               href="#"
+                               href="contact.html"
                                id="nav-contact">
                                 Contact
                             </a>
@@ -326,7 +326,7 @@
                             <button
                                 class="btn btn-outline-primary btn-download"
                                 id="btn-equity-download"
-                                data-file="equity-factsheet.pdf">
+                                data-file="assets/documents/equity-factsheet.pdf">
 
                                 Factsheet
 
@@ -408,7 +408,7 @@
                             <button
                                 class="btn btn-outline-primary btn-download"
                                 id="btn-bond-download"
-                                data-file="bond-factsheet.pdf">
+                                data-file="assets/documents/bond-factsheet.pdf">
 
                                 Factsheet
 
@@ -490,7 +490,7 @@
                             <button
                                 class="btn btn-outline-primary btn-download"
                                 id="btn-retirement-download"
-                                data-file="retirement-factsheet.pdf">
+                                data-file="assets/documents/retirement-factsheet.pdf">
 
                                 Factsheet
 
@@ -509,6 +509,114 @@
     </div>
 
 </section>
+
+<!-- ===========================
+     FUND DETAILS MODAL
+=========================== -->
+
+<div
+    class="modal fade"
+    id="fundDetailsModal"
+    tabindex="-1"
+    aria-labelledby="fundDetailsModalLabel"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5
+                    class="modal-title"
+                    id="fundDetailsModalLabel">
+
+                    Fund Details
+
+                </h5>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close">
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <h3 id="modal-fund-name">
+                    Fund Name
+                </h3>
+
+                <p id="modal-fund-description">
+                    Fund description.
+                </p>
+
+                <div class="row mt-4">
+
+                    <div class="col-md-4">
+
+                        <small>Risk Level</small>
+
+                        <h5 id="modal-risk">
+                            -
+                        </h5>
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <small>Minimum Investment</small>
+
+                        <h5 id="modal-minimum">
+                            -
+                        </h5>
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <small>5Y Return</small>
+
+                        <h5 id="modal-return">
+                            -
+                        </h5>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button
+                    type="button"
+                    class="btn btn-outline-primary"
+                    data-bs-dismiss="modal">
+
+                    Close
+
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="modal-factsheet">
+
+                    Download Factsheet
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
 <footer class="footer">
 
